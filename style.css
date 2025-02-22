@@ -5,6 +5,75 @@
     box-sizing: border-box;
 }
 
+/* Styles pour les écrans de moins de 768px (mobiles) */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Section Accueil */
+    .gradient-bg h1 {
+        font-size: 2.5rem;
+    }
+
+    .gradient-bg .slogan {
+        font-size: 1.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cta {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Sections */
+    section {
+        padding: 40px 10px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* Cartes (Formations, Expérience, Projets, Compétences) */
+    .formation-card,
+    .experience-card,
+    .project-card,
+    .competence-card {
+        width: 100%;
+    }
+
+    /* Section Contact */
+    #contact-form {
+        width: 90%;
+    }
+}
+
+/* Styles pour les écrans de moins de 480px (très petits écrans) */
+@media (max-width: 480px) {
+    .gradient-bg h1 {
+        font-size: 2rem;
+    }
+
+    .gradient-bg .slogan {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -54,6 +123,7 @@ nav {
     align-items: center;
     z-index: 1000;
 }
+ 
 
 /* Logo et image de profil */
 nav .logo {
