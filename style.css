@@ -179,7 +179,6 @@ nav ul li a {
     color: #fff;
 }
 
-
 /* Animations */
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
