@@ -179,6 +179,35 @@ nav ul li a {
     color: #fff;
 }
 
+/* Version Mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    section {
+        padding: 10px;
+    }
+    
+    footer {
+        position: relative;
+        padding: 15px 0;
+    }
+}
+
 /* Animations */
 @keyframes gradientAnimation {
     0% { background-position: 0% 50%; }
