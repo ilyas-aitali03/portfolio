@@ -8,15 +8,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="script.js" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-Y');
+</script>
 </head>
 <body>
+    <div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('Particles.js config loaded!');
+    });
+
+</script>
     <!-- Navigation -->
     <nav>
         <div class="logo">
             <img src="images-projet/profile.jpg" alt="Photo de profil" class="profile-img">
             <span>Ilyas Ait Ali</span>
         </div>
-        <ul>
+        <button id="menu-toggle">☰</button> <!-- Bouton Hamburger -->
+        <ul id="menu">
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#apropos">À propos</a></li>
             <li><a href="#formations">Formations</a></li>
@@ -60,19 +76,19 @@
         <div class="formations-grid">
             <!-- Formation 1 -->
             <div class="formation-card">
-                <h3>Technicien Spécialisé en Infrastructure Digitale option Systèmes et Réseaux</h3>
+                <h4>Technicien Spécialisé en Infrastructure Digitale option Systèmes et Réseaux</h4>
                 <p><strong>2022 - 2024</strong></p>
                 <p>Cité des Métiers et des Compétences (CMC) | Laayoune</p>
             </div>
             <!-- Formation 2 -->
             <div class="formation-card">
-                <h3>Baccalauréat en Sciences Physiques - Chimiques</h3>
+                <h4>Baccalauréat en Sciences Physiques - Chimiques</h4>
                 <p><strong>2022</strong></p>
                 <p>Lycée Baba Ahmed Ben Mohamed Yahdih | Laayoune</p>
             </div>
             <!-- Certifications -->
             <div class="formation-card">
-                <h3>Certifications CCNA</h3>
+                <h4>Certifications CCNA</h4>
                 <ul>
                     <li><p>Introduction to Networks</p></li>
                     <li><p>Switching, Routing, and Wireless Essentials</p></li>
@@ -114,6 +130,7 @@
                 <li><p>Utilisation de Packet Tracer pour modéliser les réseaux, les systèmes informatiques, la sécurité et les services numériques.</p></li>
                 <li><p>Création des VLAN, etherchannel, serveurs, protocoles de routage, DHCP.</p></li>
             </ul>
+            
         </div>
         <!-- Projet 2 -->
         <div class="project-card">

@@ -58,3 +58,33 @@ particlesJS.load('particles-js', 'particles.json', function() {
     console.log('Particles.js config chargée !');
 });
 
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active'); // Active/désactive le menu
+});
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (!name || !email || !message) {
+        e.preventDefault();
+        alert('Veuillez remplir tous les champs.');
+    }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.querySelectorAll('#menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('menu').classList.remove('active');
+    });
+});
