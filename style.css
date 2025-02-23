@@ -100,7 +100,44 @@ nav ul li a {
     cursor: pointer;
 }
 
+#menu-toggle {
+    display: none; /* Hide by default on larger screens */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
 
+#nav-menu {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block; /* Show on mobile */
+    }
+
+    #nav-menu {
+        display: none; /* Hide menu by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #nav-menu.active {
+        display: flex; /* Show menu when active */
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /* Section Accueil */
 .gradient-bg {
@@ -136,77 +173,51 @@ nav ul li a {
      /* Animation pour le slogan */
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
+    /* Adjust navigation */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Adjust hero section */
     .gradient-bg h1 {
-        font-size: 3rem; /* Réduit la taille du titre sur les petits écrans */
+        font-size: 2.5rem;
     }
 
     .gradient-bg .slogan {
-        font-size: 1.2rem; /* Réduit la taille du slogan sur les petits écrans */
+        font-size: 1.2rem;
     }
-}
 
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    animation: fadeInUp 1s ease-out; /* Animation pour les boutons */
-}
-
-.cta {
-    padding: 15px 30px;
-    background: #007BFF;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.cta:hover {
-    background: #0056b3;
-    transform: translateY(-5px);
-}
-
-.cta-secondary {
-    background: transparent;
-    border: 2px solid #007BFF;
-    color: #007BFF;
-}
-
-.cta-secondary:hover {
-    background: #007BFF;
-    color: #fff;
-}
-
-/* Version Mobile */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
-    
-    nav ul {
-        display: flex;
+    .cta-buttons {
         flex-direction: column;
-        text-align: center;
-        padding: 0;
+        gap: 10px;
     }
-    
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-    
+
+    /* Adjust sections */
     section {
-        padding: 10px;
+        padding: 40px 10px;
     }
-    
-    footer {
-        position: relative;
-        padding: 15px 0;
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .about-content, .formation-card, .experience-card, .project-card, .competence-card, .outil-card {
+        width: 100%;
+    }
+
+    /* Adjust contact form */
+    #contact-form {
+        width: 90%;
     }
 }
+
 
 /* Animations */
 @keyframes gradientAnimation {
