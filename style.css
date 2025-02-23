@@ -123,7 +123,7 @@ a:focus, button:focus, input:focus, textarea:focus {
     #menu {
         display: none; /* Menu caché par défaut */
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(248, 244, 244, 0.9);
         position: absolute;
         top: 80px;
         right: 20px;
