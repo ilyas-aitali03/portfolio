@@ -58,7 +58,3 @@ particlesJS.load('particles-js', 'particles.json', function() {
     console.log('Particles.js config chargée !');
 });
 
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.toggle('active');
-});
