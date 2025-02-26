@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ilyas Ait Ali</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-Y');
+</script>
+</head>
+<body>
+    <div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS.load('particles-js', 'particles.json', function() {
+        console.log('Particles.js config loaded!');
+    });
+
+</script>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="images-projet/profile.jpg" alt="Photo de profil" class="profile-img">
+            <span>Ilyas Ait Ali</span>
+        </div>
+        <button id="menu-toggle">☰</button> <!-- Bouton Hamburger -->
+        <ul id="menu">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#formations">Formations</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#outils">Outils</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <!-- Section Accueil -->
+<!-- Section Accueil avec dégradé animé -->
+<section id="accueil" class="gradient-bg">
+    <div class="content">
+        <h1>Ilyas Ait Ali</h1>
+        <p class="slogan">Technicien Spécialisé en Infrastructure Digitale <br> option Systèmes et Réseaux</p>
+        <div class="cta-buttons">
+            <a href="images-projet/cv.pdf" class="cta">Télécharger mon CV</a>
+            <a href="https://www.linkedin.com/in/ilyasaitali/" class="cta cta-secondary">Mon LinkedIn</a>
+        </div>
+    </div>
+</section>
+    <!-- Section À propos -->
+    <section id="apropos">
+        <h2>À propos de moi</h2>
+        <div class="about-content">
+            <p>
+                Diplômé en infrastructure digitale avec une spécialisation en systèmes et réseaux, 
+                je suis à la recherche d'une opportunité professionnelle dans le domaine des technologies de 
+                l'information. Je souhaite mettre en œuvre mes compétences techniques et mon expérience 
+                en configuration de réseaux virtuels pour contribuer au succès de votre entreprise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section Formations et certifications -->
+    <section id="formations">
+        <h2>Formations et certifications</h2>
+        <div class="formations-grid">
+            <!-- Formation 1 -->
+            <div class="formation-card">
+                <h4>Technicien Spécialisé en Infrastructure Digitale option Systèmes et Réseaux</h4>
+                <p><strong>2022 - 2024</strong></p>
+                <p>Cité des Métiers et des Compétences (CMC) | Laayoune</p>
+            </div>
+            <!-- Formation 2 -->
+            <div class="formation-card">
+                <h4>Baccalauréat en Sciences Physiques - Chimiques</h4>
+                <p><strong>2022</strong></p>
+                <p>Lycée Baba Ahmed Ben Mohamed Yahdih | Laayoune</p>
+            </div>
+            <!-- Certifications -->
+            <div class="formation-card">
+                <h4>Certifications CCNA</h4>
+                <ul>
+                    <li><p>Introduction to Networks</p></li>
+                    <li><p>Switching, Routing, and Wireless Essentials</p></li>
+                    <li><p>Enterprise Networking, Security, and Automation</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expérience professionnelle -->
+    <section id="experience">
+        <h2>Expérience professionnelle</h2>
+        <div class="experience-grid">
+            <!-- Expérience 1 -->
+            <div class="experience-card">
+                <h3>Stage : Aéroport Hassan I | Laayoune</h3>
+                <p><strong>1 mois</strong></p>
+                <ul>
+                    <li><p>Mise en place d'un réseau virtuel sécurisé utilisant la technologie DMVPN via le logiciel GNS3.</P></li>
+                    <li><p>🔹 Configuration et déploiement des tunnels VPN pour permettre la communication entre les différents aéroports.</p></li>
+                    <li><p>🔹 Collaboration avec une équipe pour la conception et l'optimisation du réseau virtuel.</p></li>
+                    <li><p>🔹 Test et validation des performances du réseau, résolution des problèmes techniques rencontrés.</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+<section id="projets">
+    <h2>Projets</h2>
+    <div class="projects-grid">
+        <!-- Projet 1 -->
+        <div class="project-card">
+            <img src="images-projet/pkt-Pojet.jfif" alt="Projet 1" class="project-image">
+            <h3>Simulation de l'Infrastructure Digitale pour la CMC</h3>
+            <ul>
+                <li><p>🔹 Contribution à la conception et à la mise en œuvre d'une simulation complète de 
+                    l'infrastructure digitale de la CMC à Laayoune-Sakia El-Hamra.</p></li>
+                <li><p>🔹 Utilisation de Packet Tracer pour modéliser les réseaux, les systèmes informatiques, la sécurité et les services numériques.</p></li>
+                <li><p>🔹 Création des VLAN, etherchannel, serveurs, protocoles de routage, DHCP.</p></li>
+            </ul>
+            
+        </div>
+        <!-- Projet 2 -->
+        <div class="project-card">
+            <img src="images-projet/gns3-Projet.jpg" alt="Projet 2" class="project-image">
+            <h3>Configuration d'un Réseau Virtuel entre les Aéroports</h3>
+            <ul>
+                <li><p>Mise en place d'un réseau virtuel sécurisé pour faciliter la communication entre les aéroports de Casablanca, Marrakech, Agadir, Essaouira, Laâyoune, Tanger, et Béni Mellal, en utilisant la technologie DMVPN.</p></li>
+                <li><p>🔹 Formation sur les VPN et les protocoles associés, y compris DMVPN.</p></li>
+                <li><p>🔹 Configuration et déploiement d'un réseau virtuel sécurisé utilisant DMVPN via le logiciel GNS3.</p></li>
+                <li><p>🔹 Collaboration étroite avec une équipe pour concevoir et mettre en œuvre le réseau.</p></li>
+            </ul>
+        </div>
+        <!-- Projet 3 -->
+        <div class="project-card">
+            <img src="images-projet/pkt-Projet2.png" alt="Projet 3" class="project-image">
+            <h3>Conception et Sécurisation d’une Infrastructure Réseau d’Entreprise</h3>
+            <p>Optimisation d'un réseau d'entreprise existant pour améliorer la performance et la sécurité.</p>
+            <ul>
+                <li><p>🔹 Segmentation réseau avec VLANs (Administration, Finance, IT</p></li>
+                <li><p>🔹 Routage inter-VLAN via switch L3 Cisco 3560 et routeur Cisco 2911</p></li>
+                <li><p>🔹 Sécurisation avancée avec ACLs pour un contrôle strict des accès</p></li>
+                <li><p>🔹 Automatisation des IPs grâce à un serveur DHCP</p></li>
+                <li><p>🔹 Accès Internet sécurisé avec NAT optimisé</p></li>
+            </ul>
+        </div>
+        <!-- Projets supplémentaires (cachés par défaut) -->
+        <div class="project-card more-projects" style="display: none;">
+            <img src="images-projet/pkt-projet3.jfif" alt="Projet 4" class="project-image">
+            <h3>Projet Réseau Complet avec Cisco Packet Tracer</h3>
+            <p>Mise en place d’un réseau structuré assurant performance, sécurité et connectivité optimisée.
+                <br><strong></strong>🔹 Segmentation réseau avec VLANs (Administration, Finance, IT).
+                <br><strong></strong>🔹 Routage inter-VLAN via switch L3 Cisco Catalyst 3560 et routeur Cisco 4331.
+                <br><strong></strong>🔹 Sécurisation avancée avec ACLs pour un contrôle strict des accès.
+                <br><strong></strong>🔹 Gestion automatisée des IPs avec un serveur DHCP centralisé.               
+                <br><strong>💡 Technologies utilisées :</strong> OSPF, VLANs, ACLs, DHCP, NAT, Cisco Packet Tracer.
+            </p>
+        </div>
+        <div class="project-card more-projects" style="display: none;">
+            <img src="images-projet/tacotex.png" alt="Projet 5" class="project-image">
+            <h3>TacoTexas - Site Web de Restaurant Responsive</h3>
+            <p><strong>TacoTexas </strong> est un site moderne conçu pour offrir une expérience utilisateur fluide et intuitive.
+                <br><strong>🔹 Exploration du menu :</strong> Découvrez les plats et spécialités du restaurant.
+                <br><strong>🔹 Réservation en ligne :</strong> Réservez une table en quelques clics.
+                <br><strong>🔹 Animations interactives :</strong> Effets au défilement pour une navigation dynamique.
+                <br><strong>🔹 Design responsive :</strong> Adapté à tous les écrans avec CSS et JavaScript.
+                <br><strong>💻 Technologies Used</strong>
+                <br><strong>🔹 Front-End:</strong> HTML, CSS, JavaScript
+                <br><strong>🔹 Deployment:</strong> Netlify
+            </p>
+        </div>
+        <div class="project-card more-projects" style="display: none;">
+            <img src="images-projet/autoilyas.png" alt="Projet 6" class="project-image">
+            <h3>AutoILYAS – Site Web de Location de Voitures et Motos</h3>
+            <p>
+                <strong>AutoILYAS </strong>is a modern and responsive car and motorcycle rental website designed to provide users with a seamless browsing and booking experience. 
+                The platform ensures intuitive navigation and a user-friendly interface.
+              <br><strong>🔹 Key Features</strong>
+              <br>✔️ Browse available vehicles with detailed information (pricing, features, availability)
+              <br>✔️ Navigate easily through sections like Home, Services, Pricing, and Contact
+              <br>✔️ Fully responsive design for a smooth experience on all devices            
+              <br><strong>💻 Technologies Used</strong>
+              <br><strong>🔹 Front-End:</strong> HTML, CSS, JavaScript
+              <br><strong>🔹 Deployment:</strong> Netlify
+            </p>
+        </div>
+    </div>
+    <button id="more-projects-btn" class="cta">More</button>
+    </div>
+</section>
+
+    <!-- Section Compétences -->
+<section id="competences">
+    <h2>Compétences</h2>
+    <div class="competences-grid">
+        <!-- Compétence 1 -->
+        <div class="competence-card">
+            <p>Réseaux (TCP/IP, DNS, DHCP)</p>
+        </div>
+        <!-- Compétence 2 -->
+        <div class="competence-card">
+            <p>Administration des systèmes Windows et Linux</p>
+        </div>
+        <!-- Compétence 3 -->
+        <div class="competence-card">
+            <p>Configuration des routeurs et commutateurs Cisco</p>
+        </div>
+        <!-- Compétence 4 -->
+        <div class="competence-card">
+            <p>Mise en place de réseaux virtuels sécurisés (VPN, DMVPN)</p>
+        </div>
+        <!-- Compétence 5 -->
+        <div class="competence-card">
+            <p>Utilisation des outils de simulation réseau (Packet Tracer, GNS3)</p>
+        </div>
+        <!-- Compétence 6 -->
+        <div class="competence-card">
+            <p>Cybersécurité : Sécurisation des réseaux et des systèmes</p>
+        </div>
+    </div>
+</section>
+    <!-- Section Outils -->
+    <section id="outils">
+        <h2>Outils et logiciels</h2>
+        <div class="outils-grid">
+            <!-- Outil 1 -->
+            <div class="outil-card">
+                <img src="outils-photos/pkt.jfif" alt="Packet Tracer">
+                <p>Packet Tracer</p>
+            </div>
+            <!-- Outil 2 -->
+            <div class="outil-card">
+                <img src="outils-photos/gns3.jpg" alt="GNS3">
+                <p>GNS3</p>
+            </div>
+            <!-- Outil 3 -->
+            <div class="outil-card">
+                <img src="outils-photos/vmware.jfif" alt="VMware">
+                <p>VMware</p>
+            </div>
+            <!-- Outil 4 -->
+            <div class="outil-card">
+                <img src="outils-photos/VirtualBox.jfif" alt="VirtualBox">
+                <p>VirtualBox</p>
+            </div>
+            <!-- Outil 5 -->
+            <div class="outil-card">
+                <img src="outils-photos/Microsoft.jfif" alt="Microsoft Office">
+                <p>Microsoft Office</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <!-- Section Contact -->
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <form id="contact-form">
+        <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        <input type="email" id="email" name="email" placeholder="Votre email" required>
+        <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/ilyasaitali/">LinkedIn</a>
+        <a href="https://github.com/ilyas-aitali03">GitHub</a> 
+        <a href="mailto:ilyassaitali03@gmail.com">Email</a>
+    </div>
+</section>
+</body>
+</html>

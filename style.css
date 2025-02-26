@@ -1,0 +1,662 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #010101;
+}
+/* Section À propos en mode sombre */
+body.dark-mode #apropos {
+    background-color: #333; /* Arrière-plan sombre pour la section À propos */
+    
+}
+
+/* Titres des sections en mode sombre */
+body.dark-mode h2 {
+    color: #fff; /* Titres en blanc en mode sombre */
+}
+
+/* Bouton de bascule */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+ 
+
+/* Logo et image de profil */
+nav .logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+nav .profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 20%; /* Rendre l'image ronde */
+    margin-right: 20px; /* Espacement entre l'image et le nom */
+}
+
+nav .logo span {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* Liste de navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 2px solid #007BFF;
+    outline-offset: 2px;
+}
+
+/* Bouton pour changer de thème */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none; /* Caché par défaut */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block; /* Affiché en mode mobile */
+    }
+
+    #menu {
+        display: none; /* Menu caché par défaut */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #menu.active {
+        display: flex; /* Affiché quand on clique sur le bouton */
+    }
+}
+
+img {
+    max-width: 100%; /* Image responsive */
+    height: auto;
+}
+
+/* Section Accueil */
+.gradient-bg {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #1a1a1a, #333, #007BFF, #1a1a1a);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-bg .content {
+    z-index: 2;
+    max-width: 90%; /* Limite la largeur du contenu */
+    margin: 0 auto; /* Centre le contenu */
+}
+
+.gradient-bg h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    ; /* Animation pour le titre */
+}
+
+.gradient-bg .slogan {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Espacement entre les lignes */
+     /* Animation pour le slogan */
+}
+
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease-out; /* Animation pour les boutons */
+    flex-direction: column; /* Boutons en colonne */
+    gap: 10px;
+}
+
+.cta {
+    padding: 15px 30px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta:hover {
+    background: #0056b3;
+    transform: translateY(-5px);
+}
+
+.cta-secondary {
+    background: transparent;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+}
+
+.cta-secondary:hover {
+    background: #007BFF;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Sections communes */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Section À propos */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    transition: transform 0.3s;
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-content, .formations-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Formations et certifications */
+.formations-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.formation-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+
+.formation-card:hover {
+    transform: translateY(-10px);
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #007BFF; /* Titre en bleu */
+    animation: fadeInDown 1s ease-out;
+    
+}
+
+.formation-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    
+}
+
+.formation-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.formation-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.formation-card ul li {
+    margin: 10px 0;
+}
+
+h2{
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #030303; /* Titre en bleu */
+    animation: fadeInDown 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    .formations-grid {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+    }
+
+    .formation-card {
+        width: 90%; /* Make cards wider on mobile */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .formation-card h4 {
+        font-size: 1.2rem; /* Reduce heading size */
+    }
+
+    .formation-card p, .formation-card ul li {
+        font-size: 0.9rem; /* Reduce text size */
+    }
+}
+
+/* Section Expérience professionnelle */
+.experience-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.experience-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #007BFF; /* Titre en bleu */
+    animation: fadeInDown 1s ease-out;
+}
+
+.experience-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.experience-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.experience-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-card ul li {
+    margin: 10px 0;
+}
+
+/* Section Projets */
+.projects-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #007BFF; /* Titre en bleu */
+    animation: fadeInDown 1s ease-out;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto; /* Taille réduite des images */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.project-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-card ul li {
+    margin: 10px 0;
+}
+
+/* Style pour le bouton More */
+#more-projects-btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+#more-projects-btn:hover {
+    background: #0056b3;
+    transform: translateY(-5px);
+}
+
+/* Style pour les projets supplémentaires */
+.more-projects {
+    display: none; /* Caché par défaut */
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+    }
+
+    .project-card {
+        width: 90%; /* Make cards wider on mobile */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .project-image {
+        height: auto; /* Allow images to resize proportionally */
+        max-height: 200px; /* Limit image height */
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem; /* Reduce heading size */
+    }
+
+    .project-card p, .project-card ul li {
+        font-size: 0.9rem; /* Reduce text size */
+    }
+}
+
+/* Section Compétences */
+.competences-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.competence-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.competence-card:hover {
+    transform: scale(1.05);
+}
+
+.competence-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    /* Compétences Section */
+    .competences-grid {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+    }
+
+    .competence-card {
+        width: 90%; /* Make cards wider on mobile */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .competence-card p {
+        font-size: 1rem; /* Adjust text size */
+    }
+}
+
+/* Section Outils */
+.outils-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.outil-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.outil-card:hover {
+    transform: scale(1.1);
+}
+
+.outil-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.outil-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Section Contact */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Change align-items to stretch for full-width form elements */
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Adjust width to be responsive */
+    max-width: 600px; /* Set max-width to prevent it from being too wide on large screens */
+    text-align: center;
+    transition: transform 0.3s;
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%; /* Ensure inputs take up full width of the form */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #f7f7f7; /* Highlight fields on focus */
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+button {
+    background-color: #007BFF;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+/* Section Contact */
+.social-links a {
+    background-color: #f4f7f9;
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Supprime le soulignement */
+    display: inline-block; /* Permet d'appliquer le padding correctement */
+}
+
+.social-links a:hover {
+    background-color: #007BFF;
+}
